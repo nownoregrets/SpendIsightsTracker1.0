@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/CSS/spendinsightstracker.css">
+    <!-- For External Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Efficiently manage your expenses with SpendInsights Tracker. Add income, track balance, and export data for a comprehensive view of your finances.">
+    <meta name="keywords"
+        content="Personal Finance, Expense Tracker, Income Management, Financial Insights, Budgeting Tool, Expense Export, Finance Management">
+    <title>SpendInsights Tracker - Manage Finances Efficiently</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="https://nownoregrets.com/">SpendInsights Tracker</a></h1>
+        <!-- <hr style="color: #E8E8E8; width: 20%;"> -->
+    </header>
+    <main>
+        <!-- Top Section -->
+
+        <div class="top-box">
+            <!-- For Profile -->
+            <div class="profile">
+                <!-- For Pic -->
+                <label for="profile-pic" id="picture"></label>
+                <input type="file" name="profile-pic" id="profile-pic">
+
+                <div id="profile-name">
+                    <!-- For Name -->
+                    <h3 id="user-name">Your Name?</h3>
+                    <button onclick="userNameFun()"><i class="fa fa-edit" id="name-edit"></i></button>
+                    <span>Welcome Back!</span>
+                </div>
+            </div>
+
+            <div class="balance-box">
+                <div id="balance-amount-box">
+                    <!-- For Balance -->
+                    <h3 style="margin-bottom: 4px;">Your Balance</h3>
+                    <h2 id="balance" style="display: inline-block;">Rs 0</h2>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Input Section -->
+        <div id="balance-input-box">
+            <!-- For Input -->
+            <label for="balance-input" style="display: block;">Add Income</label>
+            <input type="number" name="balanceInput" id="balance-input" placeholder="Enter Amount" class="input">
+            <button class="btn" onclick="addBalanceFun()">Add</button>
+            <button class="btn" onclick="clearStorage()">Clear</button>
+        </div>
+        <hr style="color: #123753;">
+
+        <div class="input-box">
+            <label for="expense-desc" style="display: block;">Add Expense</label>
+            <input type="text" name="expenseInput" id="expense-desc" placeholder="Description" class="input">
+            <input type="number" placeholder="Amount" id="expense-amount" class="input">
+            <button class="btn" onclick="addExpense()">Add</button>
+        </div>
+
+        <hr style="color: #123753;">
+
+        <!-- Expense Box -->
+        <div id="expenses">
+
+            <div id="expense-top">
+                <h3>Your Expense</h3>
+                <h3 id="total-expense">Total Expense: Rs 0</h3>
+            </div>
+
+            <div id="expense-list">
+                <ul id="expense-ul">
+                    <!-- Don't Change Anything Here
+                    Lists Will Be Added Here By JavaScript -->
+                </ul>
+            </div>
+        </div>
+        <button class="btn" onclick="exportData()" id="export-btn">Export</button>
+    </main>
+
+    <footer>
+        <h3>&copy; Now No Regrets | All The Rights Reserved</h3>
+    </footer>
+</body>
+<script src="/JS/spendinsightstracker.js"></script>
+
+</html>

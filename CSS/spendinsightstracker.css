@@ -1,0 +1,533 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+    background-color: #E6E6E6;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 10vh;
+    background-color: #123753;
+}
+
+header a {
+    color: #E6E6E6;
+    text-decoration: none;
+}
+
+/* Main */
+main {
+    width: 100vw;
+}
+
+.top-box {
+    width: 100%;
+    height: 40vh;
+    background-color: #123753;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* Profile */
+.profile {
+    width: 50%;
+    height: 30%;
+    /* background-color: #E6E6E6; */
+    color: #E6E6E6;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    border-radius: 2vw;
+}
+
+#profile-pic {
+    display: none;
+}
+
+.profile label {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 100%;
+    background-color: #ED5024;
+    background-image: url("/Images/SpendIsigts\ Tracker.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+#profile-name h3 {
+    display: inline-block;
+}
+
+#profile-name span {
+    display: block;
+}
+
+#profile-name button {
+    background: none;
+    border: none;
+    margin-left: .3vw;
+}
+
+#name-edit {
+    color: #E6E6E6;
+    font-size: large;
+    cursor: pointer;
+}
+
+/* Balance */
+.balance-box {
+    width: 20%;
+    height: 60%;
+    border-radius: 2vw;
+    margin: auto;
+    background-color: #ED5024;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#balance-amount-box {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#balance-amount-box h3 {
+    font-size: .9vw;
+}
+
+#balance-amount-box h2 {
+    font-size: 2.5vw;
+}
+
+/* Input Section */
+.input-box {
+    width: 90%;
+    height: 30%;
+    margin-left: 1%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.input {
+    width: 350px;
+    height: 22px;
+    padding: .3%;
+    border-radius: .4vw;
+    border: .2vw solid #123753;
+    font-size: large;
+    margin-bottom: 1.5%;
+}
+
+.input::placeholder {
+    padding: 5%;
+    font-size: medium;
+}
+
+#expense-box {
+    width: 50%;
+}
+
+#balance-input-box {
+    width: 40%;
+    margin: 2% 0% 0% 4%;
+}
+
+#balance-input-box input {
+    width: 250px;
+}
+
+.btn {
+    background-color: #ED5024;
+    color: #000;
+    cursor: pointer;
+    width: 10%;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #123753;
+    color: #E6E6E6;
+    transition: linear .2s;
+}
+
+/* For Expenses Section */
+#expenses {
+    width: 100vw;
+}
+
+#expense-top {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list {
+    margin: 1% 0% 0% 2%;
+    font-size: 1.4vw;
+    color: #123753;
+}
+
+/* For Export */
+
+#export-btn {
+    margin: 1% 0% 1% 2%;
+}
+
+footer {
+    width: 100vw;
+    height: 5vh;
+    background-color: #123753;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 960px) {
+    .btn {
+        width: 12%;
+        padding: 6px;
+    }
+
+    .input {
+        height: 38%;
+        font-size: 1.5vw;
+    }
+
+    .input::placeholder {
+        font-size: 1.4vw;
+    }
+
+    #expense-top {
+        width: 60%;
+    }
+
+    .list {
+        font-size: 1.5vw;
+        margin-left: 2.5%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .profile label {
+        width: 6.5vw;
+        height: 6.5vw;
+    }
+
+    #profile-name h3 {
+        font-size: medium;
+    }
+
+    #profile-name span {
+        font-size: 1.6vw;
+    }
+
+    .balance-box {
+        height: 40%;
+    }
+
+    .input {
+        height: 25%;
+        border-radius: .8vw;
+    }
+
+    .input-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #balance-input-box input {
+        width: 50%;
+        border-radius: .5vw;
+    }
+
+    #expense-top {
+        width: 65%;
+    }
+
+    .list {
+        font-size: 1.7vw;
+        margin-left: 2.8%;
+    }
+}
+
+@media only screen and (max-width: 746px) {
+    .input {
+        padding: 1%;
+    }
+
+    .btn {
+        width: 15%;
+        padding: 1%;
+    }
+
+    #expense-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #expense-box span {
+        display: none;
+    }
+
+    #expense-box input {
+        margin-bottom: 3%;
+    }
+
+    .btn {
+        width: 38.5%;
+    }
+
+    #expense-top {
+        width: 65%;
+        font-size: 1.9vw;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+    .list {
+        font-size: 1.8vw;
+        margin: 1.5% 0% 0% 2.9%;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .profile {
+        width: 60%;
+    }
+
+    .profile label {
+        width: 8.5vw;
+        height: 8.5vw;
+    }
+
+    #profile-name span {
+        font-size: 2.3vw;
+    }
+
+    .top-box {
+        flex-direction: column;
+    }
+
+    .balance-box {
+        width: 30%;
+    }
+
+    #balance-amount-box h3 {
+        font-size: 2vw;
+    }
+
+    #balance-amount-box h2 {
+        font-size: 4.5vw;
+    }
+
+    .input {
+        width: 40%;
+        height: 25%;
+    }
+
+    .input::placeholder {
+        font-size: 1.8vw;
+    }
+
+    #balance-input-box input {
+        width: 50%;
+        height: 2vh;
+        border-radius: .5vw;
+    }
+
+    #expense-top {
+        width: 68%;
+        font-size: 2.3vw;
+    }
+
+    .list {
+        font-size: 2.3vw;
+        margin-left: 4.5%;
+    }
+
+    footer h3 {
+        font-size: 2.8vw;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    header h1 {
+        font-size: larger;
+    }
+
+    .profile {
+        width: 65%;
+    }
+
+    .profile label {
+        width: 10.5vw;
+        height: 10.5vw;
+    }
+
+    #profile-name span {
+        font-size: 2.9vw;
+    }
+
+    .balance-box {
+        width: 35%;
+    }
+
+    #balance-input-box input {
+        width: 50%;
+        height: 2.5vh;
+    }
+
+    #balance-input-box {
+        width: 100%;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+
+    .input {
+        width: 70%;
+    }
+
+    #expense-top {
+        width: 75%;
+        font-size: 2.5vw;
+    }
+
+    .list {
+        font-size: 2.8vw;
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    header h1 {
+        font-size: large;
+    }
+
+    .profile {
+        width: 70%;
+    }
+
+    .profile label {
+        width: 12.5vw;
+        height: 12.5vw;
+    }
+
+    #profile-name h3 {
+        font-size: small;
+    }
+
+    #profile-name span {
+        font-size: 2.9vw;
+    }
+
+    #balance-amount-box h3 {
+        font-size: 2.3vw;
+    }
+
+    #balance-amount-box h2 {
+        font-size: 5vw;
+    }
+
+    .input {
+        height: 2vh;
+    }
+
+    .input::placeholder {
+        font-size: 2vw;
+    }
+
+    #expense-top {
+        width: 80%;
+        font-size: 2.8vw;
+    }
+
+    .list {
+        font-size: 2.9vw;
+        margin-left: 5.3%;
+    }
+
+    footer h3 {
+        font-size: 2.9vw;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    header h1 {
+        font-size: large;
+    }
+
+    .profile {
+        width: 75%;
+    }
+
+    .profile label {
+        width: 13.5vw;
+        height: 13.5vw;
+    }
+
+    #profile-name h3 {
+        font-size: small;
+    }
+
+    #profile-name span {
+        font-size: 2.9vw;
+    }
+
+    .balance-box {
+        width: 40%;
+    }
+
+    #balance-amount-box h3 {
+        font-size: 2.5vw;
+    }
+
+    #balance-amount-box h2 {
+        font-size: 6vw;
+    }
+
+    .input::placeholder {
+        font-size: 2.8vw;
+    }
+
+    #expense-top {
+        width: 90%;
+        font-size: 3.1vw;
+    }
+
+    .list {
+        font-size: 3.2vw;
+        margin-left: 5.5%;
+    }
+
+    footer h3 {
+        font-size: 3vw;
+    }
+}
